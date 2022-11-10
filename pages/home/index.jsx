@@ -1,8 +1,11 @@
 import MainLayaut from "../../Components/MainLayaut"
+import Block from "./style"
 
 const Home=()=>{
     return (<MainLayaut>
-        HomePage
+<Block>
+HomePage
+</Block>
     </MainLayaut>)
 }
 

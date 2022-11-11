@@ -1,4 +1,7 @@
 import { useRouter } from "next/router"
+import GenCarusel from "../Carusel"
+import Profile from "../Fetch"
+import Blog from "../Fetch"
 import { Box, Conatiner, Linked, Menu, Product } from "./style"
 const { default: Link } = require("next/link")
 
@@ -26,7 +29,9 @@ const Filter=()=>{
 
     </Menu>
 
-<Product>2</Product>
+<Product>
+    <Profile/>
+</Product>
 </Box>
         </Conatiner>
         

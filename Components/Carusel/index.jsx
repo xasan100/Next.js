@@ -3,14 +3,22 @@ import 'antd/dist/antd.css';
 import Image from "next/image";
 import Big from "../Assets/GulBig.png"
 import Min from "../Assets/GulMin.png"
+import useSWR from 'swr'
+
 
 
 
 const  GenCarusel=()=>{
+
+
+
+
+
+
     const onChange = (currentSlide) => {
         console.log(currentSlide);
       };
-const contentStyle = {
+    const contentStyle = {
         margin: 0,
         height: '100%',
         color: '#fff',
@@ -21,7 +29,7 @@ const contentStyle = {
 return (
 <Hero> 
 <Width/>
-<Carusell  autoplay  afterChange={onChange}>
+<Carusell   afterChange={onChange}>
    <Container>
       <Box>
       <Title >
@@ -34,8 +42,8 @@ return (
        <button> SHOP NOW</button>
       </Title>
     <ImgBox>
-    <Image className='Min'  src={Min}/>
-    <Image src={Big}/>
+    <Image className='Min'  src={Min} alt='s'/>
+    <Image src={Big} srs='3e'/>
     </ImgBox>
       </Box>
    </Container>
@@ -52,7 +60,8 @@ return (
        <button> SHOP NOW</button>
       </Title>
     <ImgBox>
-    <Image className='Min'  src={Min}/>
+    <Image className='Min'  src={Min} alt='Srs'/>
+ 
     <Image src={Big}/>
     </ImgBox>
       </Box>

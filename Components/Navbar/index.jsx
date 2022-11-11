@@ -9,7 +9,7 @@ const Navbar =()=>{
     return (
         <Container> 
         <LogoBox>
-            <Image  src={logo}/>
+            <Image  src={logo} srs='logo'/>
             <h3>GREENSHOP</h3>
          </LogoBox>
            <Linked href={'/home'}> <p className={query.pathname === '/home' ? 'active' : ''}>Home</p>  </Linked> 

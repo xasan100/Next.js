@@ -26,7 +26,6 @@ const Filter=()=>{
     <div> <p>Trerrariums </p> <p>(19)</p></div>   
     <div> <p>Gardening </p> <p>(13)</p></div>   
     <div> <p>Accessories </p> <p>(18)</p></div>   
-
     </Menu>
 
 <Product>

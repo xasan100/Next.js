@@ -1,19 +1,11 @@
 import { Box, Carusell, Container, Hero, ImgBox, Title, Width } from './style';
 import 'antd/dist/antd.css';
-import Image from "next/image";
 import Big from "../Assets/GulBig.png"
 import Min from "../Assets/GulMin.png"
-import useSWR from 'swr'
-
-
+import Image from 'next/image';
 
 
 const  GenCarusel=()=>{
-
-
-
-
-
 
     const onChange = (currentSlide) => {
         console.log(currentSlide);
@@ -42,8 +34,8 @@ return (
        <button> SHOP NOW</button>
       </Title>
     <ImgBox>
-    <Image className='Min'  src={Min} alt='s'/>
-    <Image src={Big} srs='3e'/>
+    <Image className='Min' src={Min}alt="Min" /> 
+    <Image src={Big}  alt="Big"/>
     </ImgBox>
       </Box>
    </Container>
@@ -60,9 +52,8 @@ return (
        <button> SHOP NOW</button>
       </Title>
     <ImgBox>
-    <Image className='Min'  src={Min} alt='Srs'/>
- 
-    <Image src={Big}/>
+    <Image src={Big}  alt="Big"/>
+    <Image className='Min' src={Min}alt="Min" /> 
     </ImgBox>
       </Box>
    </Container>

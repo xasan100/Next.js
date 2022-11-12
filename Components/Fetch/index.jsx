@@ -1,12 +1,12 @@
 //
 import Image from 'next/image';
-import { useState } from 'react';
 import useSWR from 'swr'
+import { Block, Card, Container } from './style';
 
 const fetcher = (...args) => fetch(...args).then((res) => res.json())
 
 
-function Profile() {
+function Profile( { title, coverImage, slug }) {
     
     const { data, error } = useSWR('https://greenshophorizontteam.herokuapp.com/product', fetcher)
     console.log(data,'res');
@@ -22,13 +22,21 @@ function Profile() {
     };
     
   return (
-    <div>
-        {data[0].title}
-      <Image
-    alt="The guitarist in the concert."
-/>
+    <Container>
+   {data.map((value,ind)=>{
+    return( <div key={ind}>
+    <Block>  
+ 
+  
+   <p>{value.title}</p>
+    </Block>
+    </div> )
+})}
+
+     
     
-    </div>
+    </Container>
   )
 }
 export default  Profile
+
